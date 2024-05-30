@@ -35,13 +35,7 @@ export default function OrdersPage() {
   }
 
   const onCreateOrder = async (order: any) => {
-    // if (!account || !contract || !activeSigner || !api) {
-    //   toast.error('Wallet not connected. Try again…')
-    //   return
-    // }
     const txb = new TransactionBlock()
-
-    const amountToTransfer = Number(order.depositAmount.replaceAll('.', ''))
 
     const [coin] = txb.splitCoins(txb.gas, [txb.pure(order.depositAmount * Math.pow(10, 9))])
     const orderArgs: CreateOrderArgs = {
@@ -51,15 +45,8 @@ export default function OrdersPage() {
       coin: coin,
       amountToReceive: order.receiveAmount,
     }
-    //     paymentKey,
-    // depositAmount,
-    // receiveAmount,
-    // name: data.data.encryptedName,
-    createOrder(txb, orderArgs)
 
-    // signAndExecuteTransactionBlock({
-    //   transactionBlock: txb,
-    // })
+    createOrder(txb, orderArgs)
 
     await contractTxWithToast(signAndExecuteTransactionBlock, txb)
     setShowPlaceOrderForm(false)

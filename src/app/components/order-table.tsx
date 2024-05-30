@@ -58,15 +58,6 @@ export default function OrderTable({
   }
 
   const getStatus = (order: any): string => {
-    // const claimedOrder = claimOrders.filter((claimOrder: any) => {
-    //   return claimOrder.orderIndex == order.id && claimOrder.status != 'Canceled'
-    // })
-
-    // if (claimedOrder.length > 0) {
-    //   return claimedOrder[0].status
-    // }
-    console.log(order)
-    console.log('order', order.status)
     return order.status
   }
 
