@@ -50,7 +50,7 @@ export default function HomePage() {
           Lightning-fast Fiat to SUI Transaction with the highest level of security
         </h1>
         <h2 className="max-w-2xl text-center text-xl font-normal leading-normal text-zinc-300 md:leading-7">
-          ZKRamp leverages zero-knowledge proofs to ensure your transactions remain private while
+          ZK Ocean leverages zero-knowledge proofs to ensure your transactions remain private while
           providing unmatched efficiency in onramp/offramp solutions.
         </h2>
       </div>
