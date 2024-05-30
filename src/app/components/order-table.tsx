@@ -38,6 +38,10 @@ export default function OrderTable({
     })
   }
 
+  useEffect(() => {
+    refresh()
+  }, [hackyWayToForceRerender])
+
   const filterMyClaimOrders = (claimOrders: any) => {
     return claimOrders
       .filter((claimOrder: any) => {
